@@ -1,0 +1,21 @@
+import random
+
+def gerar_sensibilidade():
+    sensi = {
+        "Geral": random.randint(50, 100),
+        "Red Dot": random.randint(50, 100),
+        "Mira 2x": random.randint(50, 100),
+        "Mira 4x": random.randint(50, 100),
+        "Mira AWM": random.randint(0, 50),
+        "Olhadinha": random.randint(0, 100)
+    }
+    return sensi
+
+def mostrar_sensibilidade(sensi):
+    print("Configuração de Sensibilidade Sugerida:")
+    for nome, valor in sensi.items():
+        print(f"{nome}: {valor}")
+
+if __name__ == "__main__":
+    sensi = gerar_sensibilidade()
+    mostrar_sensibilidade(sensi)
